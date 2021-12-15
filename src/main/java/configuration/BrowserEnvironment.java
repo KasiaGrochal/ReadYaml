@@ -72,11 +72,11 @@ public class BrowserEnvironment {
                 WebDriverManager.chromedriver().setup();
                 optionsChrome.addArguments("start-maximized");
                 driver = new ChromeDriver(optionsChrome);          //listener
-                yamlReader = new YamlReader();
-                String webUrl = yamlReader.getConfig().getEnvironments().getEnvironment().getWebUrl();
+                /*yamlReader = new YamlReader();
+                String webUrl = yamlReader.getConfig().getEnvironments().getEnvironment().getWebUrl();      */
+                String webUrl= System.getProperty("webUrl");
                 driver.get(webUrl);
                 logger.info("Opened website at webUrl: {}", webUrl);
-                //driver.get(System.getProperty("webUrl"));
                 break;
             case "firefox":
                 FirefoxOptions optionsFirefox = new FirefoxOptions();
@@ -87,8 +87,9 @@ public class BrowserEnvironment {
 //                webListener = new WebListener();                     //listener
 //                driver.register(webListener);                         //listener
 //                webdriver.get(System.getProperty("appUrl"));
-                yamlReader = new YamlReader();
-                String webUrl1 = yamlReader.getConfig().getEnvironments().getEnvironment().getWebUrl();
+                /*yamlReader = new YamlReader();
+                String webUrl1 = yamlReader.getConfig().getEnvironments().getEnvironment().getWebUrl();*/
+                String webUrl1 = System.getProperty("webUrl");
                 driver.get(webUrl1);
                 logger.info("Opened website at webUrl: {}", webUrl1);
                 break;
@@ -100,8 +101,9 @@ public class BrowserEnvironment {
 //                webListener = new WebListener();                     //listener
 //                driver.register(webListener);                         //listener
 //                webdriver.get(System.getProperty("appUrl"));
-                yamlReader = new YamlReader();
-                String webUrl2 = yamlReader.getConfig().getEnvironments().getEnvironment().getWebUrl();
+                /*yamlReader = new YamlReader();
+                String webUrl2 = yamlReader.getConfig().getEnvironments().getEnvironment().getWebUrl();*/
+                String webUrl2 = System.getProperty("webUrl");
                 driver.get(webUrl2);
                 logger.info("Opened website at webUrl: {}", webUrl2);
         }
