@@ -1,4 +1,4 @@
-package configuration;
+package configuration.models;
 
 public class EnvironmentModel {
     public String envName;
