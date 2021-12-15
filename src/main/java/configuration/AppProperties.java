@@ -5,10 +5,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
-public class EnvironmentProperty {
-    Logger logger = LoggerFactory.getLogger(EnvironmentProperty.class);
+public class AppProperties {
+    Logger logger = LoggerFactory.getLogger(AppProperties.class);
 
-    public EnvironmentProperty() {
+    public AppProperties() {
         setSystemPropertiesFromYamlFile();
     }
 

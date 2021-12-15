@@ -7,16 +7,16 @@ import java.io.File;
 import java.io.IOException;
 
 public class YamlReader {
-    public static Config config;
+    public static AppConfig config;
 
-    public Config getConfig() {
+    public AppConfig getConfig() {
         return config;
     }
 
     public YamlReader() {
         try {
             ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
-            this.config = mapper.readValue(new File("src/main/resources/config.yaml"), Config.class);
+            this.config = mapper.readValue(new File("src/main/resources/config.yaml"), AppConfig.class);
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -1,6 +1,6 @@
 package configuration;
 
-public class Config {
+public class AppConfig {
 
     public Environments environments;
     public DataBase dataBase;
